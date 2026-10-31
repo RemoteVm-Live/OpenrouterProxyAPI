@@ -1,103 +1,239 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="data:image/png;base64,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
-" />
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>OpenAI/ChatGPT 工具箱</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet">
-    <script defer src="https://cdn.bootcdn.net/ajax/libs/alpinejs/3.12.0/cdn.min.js"></script>
-    <link href="/assets/css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>پروکسی API - OpenRouter</title>
+    <!-- فونت وزیرمتن -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <!-- بوت‌استرپ نسخه راست‌چین -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <!-- استایل آیکون‌ها -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            padding-top: 70px;
+        }
+        .navbar-custom {
+            background-color: #1a1a2e;
+            box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        }
+        .navbar-custom .navbar-brand {
+            color: #fff;
+            font-weight: bold;
+        }
+        .hero-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 60px 0;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 40px;
+        }
+        .endpoint-box {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 15px 20px;
+            font-family: monospace;
+            font-size: 1.1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .endpoint-box:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .code-block {
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 10px;
+            direction: ltr;
+            text-align: left;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            position: relative;
+        }
+        .btn-copy {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #fff;
+            background: rgba(255,255,255,0.1);
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+        }
+        .btn-copy:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .card-custom {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        .card-custom:hover {
+            transform: translateY(-5px);
+        }
+        footer {
+            background-color: #1a1a2e;
+            color: #ccc;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+    </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <!-- نوار ناوبری -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top navbar-custom">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="/">
+                <i class="bi bi-cloud-check me-2"></i>پروکسی OpenRouter
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" href="/">Home</a>
+                        <a class="nav-link active" href="/">صفحه اصلی</a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="./gallery.html">Gallery</a>
-                    </li> -->
                     <li class="nav-item">
-                        <a class="nav-link" href="./about.html">About</a>
+                        <a class="nav-link" href="https://openrouter.ai/docs" target="_blank">مستندات OpenRouter</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="container kv-main">
-        <div class="page-header" x-data="{ origin: '' }" x-init="origin = window.location.origin">
-            <h2>查询 OpenaiAPI 余额</h2>
-            <p>API接口: <span class="proxy" x-text="origin" @click="copyToClipboard(origin)"></span>
-                ;支持批量查询，一行一个；点击清理可以清理失效的key。<a style="text-decoration: none;" href="/about.html">Authorization获取方法</a> </p>
-        </div>
-        <main x-data="app" x-cloak>
-            <p x-show.transition.opacity="alert" :class="alert?.type" x-text="alert?.message"></p>
-            <textarea class="form-control" rows="5" placeholder="请输入以sess-xxxx开头的Authorization" x-model="u"></textarea></p>
-            <div class="d-grid gap-2 d-sm-block">
-                <button :class="{ loading }" class="btn btn-primary me-sm-3 " :disabled="loading"
-                    @click="submit($refs)">查询</button>
-                <button class="btn btn-secondary" @click="clear">清理</button>
-            </div>
-            <p></p>
-            <div x-show.transition.opacity="total && total.length > 0" x-cloak class="card mb-3">
-                <div class="card-body table-responsive">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">API KEY</th>
-                                <th scope="col">账号类型</th>
-                                <th scope="col">最高模型</th>
-                                <th scope="col">额度总量</th>
-                                <th scope="col">已用额度</th>
-                                <th scope="col">剩余额度</th>
-                                <th scope="col">过期时间</th>
-                            </tr>
-                        </thead>
-                        <tbody x-show.transition.opacity="total" x-cloak>
-                            <template x-for="(item, index) in total" :key="index">
-                                <tr>
-                                    <th scope="row" x-text="index + 1"></th>
-                                    <td x-text="item.msgkey"></td>
-                                    <td x-text="item.plan"></td>
-                                    <td x-text="item.latest_gpt"></td>
-                                    <td x-text="item.total_granted"></td>
-                                    <td x-text="item.total_used"></td>
-                                    <td x-text="item.total_available"></td>
-                                    <td x-text="item.endDate"></td>
-                                </tr>
-                            </template>
 
-                        </tbody>
-                    </table>
+    <!-- بخش هدر (Hero) -->
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">پروکسی امن و سریع برای OpenRouter</h1>
+            <p class="lead mb-5">از این آدرس به عنوان Base URL در برنامه‌ها و کدهای خود استفاده کنید.</p>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <div class="endpoint-box" onclick="copyToClipboard('https://proxy.yidaki.ir/v1')">
+                        <span id="proxy-url">https://proxy.yidaki.ir/v1</span>
+                        <i class="bi bi-clipboard" id="copy-icon"></i>
+                    </div>
+                    <small class="text-light mt-2 d-block opacity-75">برای کپی کردن کلیک کنید</small>
                 </div>
             </div>
-        </main>
-        <div class="page-footer"></div>
+        </div>
+    </header>
 
-    </div>
-    <footer class="footer">
-        <div class="container text-center">
-            <!-- <p class="text-muted" x-data="ip" x-init='$nextTick(() => {getipinfo()})' x-show.transition.opacity="ipinfo"
-                x-text="ipinfo"></p> -->
-            <p>本程序基于Cloudflare Pages，开源于GitHub <a href="https://github.com/x-dr/chatgptProxyAPI"
-                    target="_blank">chatgptProxyAPI</a></p>
+    <!-- بخش نمونه کدها -->
+    <main class="container">
+        <div class="row">
+            <!-- نمونه کد cURL -->
+            <div class="col-lg-6 mb-4">
+                <div class="card card-custom h-100">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3"><i class="bi bi-terminal me-2"></i>نمونه دستور cURL</h5>
+                        <div class="code-block">
+                            <button class="btn-copy" onclick="copyCode(this)">کپی</button>
+<pre><code>curl https://proxy.yidaki.ir/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer sk-or-v1-YOUR_API_KEY" \
+  -d '{
+    "model": "openai/gpt-4o",
+    "messages": [
+      {"role": "user", "content": "سلام!"}
+    ]
+  }'</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- نمونه کد Python -->
+            <div class="col-lg-6 mb-4">
+                <div class="card card-custom h-100">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3"><i class="bi bi-filetype-py me-2"></i>نمونه کد Python</h5>
+                        <div class="code-block">
+                            <button class="btn-copy" onclick="copyCode(this)">کپی</button>
+<pre><code>from openai import OpenAI
+
+client = OpenAI(
+    base_url="https://proxy.yidaki.ir/v1",
+    api_key="sk-or-v1-YOUR_API_KEY" # کلید OpenRouter
+)
+
+response = client.chat.completions.create(
+    model="anthropic/claude-3.5-sonnet",
+    messages=[{"role": "user", "content": "سلام!"}]
+)
+print(response.choices[0].message.content)</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- راهنما و هشدارها -->
+        <div class="alert alert-info mt-4 shadow-sm" role="alert">
+            <h5 class="alert-heading"><i class="bi bi-info-circle me-2"></i>نکات مهم برای استفاده</h5>
+            <hr>
+            <ul class="mb-0">
+                <li>حتماً از کلید API خود <strong>OpenRouter</strong> (شروع با <code>sk-or-v1-</code>) استفاده کنید. کلیدهای OpenAI در اینجا کار نمی‌کنند.</li>
+                <li>نام مدل‌ها باید مطابق با مستندات OpenRouter باشد (مثلاً <code>openai/gpt-4o</code> یا <code>google/gemini-pro</code>).</li>
+                <li>این پروکسی تمامی درخواست‌های مسیر <code>/v1</code> را به <code>https://openrouter.ai/api/v1</code> هدایت می‌کند.</li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- فوتر -->
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0">این سرویس بر پایه Cloudflare Pages راه‌اندازی شده است. کدهای متن‌باز در <a href="https://github.com/RemoteVm-Live/OpenrouterProxyAPI" target="_blank" class="text-info">GitHub</a> در دسترس هستند.</p>
         </div>
     </footer>
-    <script src="./assets/js/openai.js"></script>
-    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.min.js"></script>
+
+    <!-- اسکریپت‌های مورد نیاز -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // تابع کپی کردن آدرس
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const icon = document.getElementById('copy-icon');
+                icon.className = 'bi bi-check2-circle text-success';
+                setTimeout(() => {
+                    icon.className = 'bi bi-clipboard';
+                }, 2000);
+            }).catch(err => {
+                console.error('خطا در کپی: ', err);
+                alert('خطا در کپی کردن آدرس!');
+            });
+        }
+
+        // تابع کپی کردن کدها
+        function copyCode(btn) {
+            const code = btn.nextElementSibling.innerText;
+            navigator.clipboard.writeText(code).then(() => {
+                const originalText = btn.innerText;
+                btn.innerText = 'کپی شد!';
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                }, 2000);
+            });
+        }
+    </script>
 </body>
 
 </html>
